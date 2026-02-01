@@ -1,5 +1,5 @@
 ---
-name: writing-resumes
+name: resume-creator
 description: Expert resume writer and career strategist. Analyzes any user-provided file (PDF, Word, Excel, Image, TXT, MD, or web links) to enhance skills, experience, and project descriptions. Optimized for ATS and professional impact. Use when the user wants to update, refine, or create a resume from an existing file.
 ---
 

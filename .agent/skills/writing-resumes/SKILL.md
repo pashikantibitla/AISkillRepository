@@ -39,7 +39,9 @@ This skill enables the agent to act as an elite career coach and resume writer. 
 ### 3. Universal File Handling
 - **Non-Textual Files**: If an image is provided, perform OCR/Vision analysis first.
 - **Spreadsheets**: If skills are listed in Excel, use `xlsx` tool to extract data.
-- **Verification**: Always verify the target path before saving with `write_to_file`.
+- **Default Output Path**: `C:/Users/pashi/Downloads/` (Use this as the target directory unless otherwise specified).
+- **Default Output Format**: **PDF** (Use the `pdf` creation tool for the final export).
+- **Verification**: Always verify the target path before saving.
 
 ## Resources
 - [Resume Power Verbs Library](resources/power-verbs.md)

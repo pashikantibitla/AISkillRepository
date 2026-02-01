@@ -1,23 +1,28 @@
 ---
 name: writing-resumes
-description: Expert resume writer and career strategist. Analyzes user-uploaded resumes to enhance skills, experience, and project descriptions. Optimized for ATS and professional impact. Use when the user wants to update, refine, or create a resume from an existing file.
+description: Expert resume writer and career strategist. Analyzes any user-provided file (PDF, DOCX, TXT, MD, images, or web links) to enhance skills, experience, and project descriptions. Optimized for ATS and professional impact. Use when the user wants to update, refine, or create a resume from an existing file.
 ---
 
-# Professional Resume Writing & Optimization
+# Professional Resume Writing & Optimization (Universal Support)
 
-This skill enables the agent to act as an elite career coach and resume writer. It systematically analyzes existing documents, extracts key values, and generates high-impact professional resumes tailored to specific domains.
+This skill enables the agent to act as an elite career coach and resume writer. It systematically analyzes existing documents in any format, extracts key values, and generates high-impact professional resumes tailored to specific domains.
 
 ## When to use this skill
-- When a user uploads a resume (PDF, DOCX, or MD) and asks for improvement.
+- When a user uploads a resume in ANY format (PDF, DOCX, MD, TXT, or even a screenshot/image).
+- When the user provides a link to a LinkedIn profile or portfolio website.
 - When the user needs to tailor their experience to a specific job description.
-- When the user wants to highlight specific project achievements or technical skills.
 
 ## Workflow
-1. [ ] **Analyze Input**: Read the uploaded file using `pdf` or `docx` tools.
+1. [ ] **Analyze Input**: Utilize the appropriate tool for the input type:
+   - **PDF**: Use the `pdf` tool.
+   - **Word (.docx)**: Use the `docx` tool.
+   - **Images**: Use vision capabilities to read text from screenshots.
+   - **Web Links**: Use `read_url_content` to fetch profile data.
+   - **Text/MD/Code**: Use `view_file`.
 2. [ ] **Extract Identity**: Map out the user's Core Skills, Experience (Years/Roles), Domain Expertise, and Major Projects.
 3. [ ] **Refine Content**: Rewrite bullet points using the "Action Verb + Task + Result" (STAR/XYZ) formula.
-4. [ ] **Format & Style**: Structure the content in Markdown or suggest a professional layout.
-5. [ ] **Export**: Save the final version to the user's specified path using `write_to_file`.
+4. [ ] **Format & Style**: Structure the content in Markdown, PDF, or DOCX as requested by the user.
+5. [ ] **Export**: Save the final version to the user's specified path using `write_to_file` or the `docx` creation tool.
 
 ## Instructions
 
@@ -30,10 +35,10 @@ This skill enables the agent to act as an elite career coach and resume writer. 
 - **ATS Optimization**: Ensure keywords from the target domain are naturally integrated.
 - **Power Verbs**: Use words like *Spearheaded*, *Architected*, *Optimized*, and *Orchestrated*.
 
-### 3. File Handling
-- Use `pdf` tool to read contents if the user provides a `.pdf`.
-- Use `docx` tool to read/write if the user provides a `.docx`.
-- Always verify the target path before saving with `write_to_file`.
+### 3. Universal File Handling
+- **Non-Textual Files**: If an image is provided, perform OCR/Vision analysis first.
+- **Spreadsheets**: If skills are listed in Excel, use `xlsx` tool to extract data.
+- **Verification**: Always verify the target path before saving with `write_to_file`.
 
 ## Resources
 - [Resume Power Verbs Library](resources/power-verbs.md)

@@ -1,6 +1,6 @@
 ---
 name: writing-resumes
-description: Expert resume writer and career strategist. Analyzes any user-provided file (PDF, DOCX, TXT, MD, images, or web links) to enhance skills, experience, and project descriptions. Optimized for ATS and professional impact. Use when the user wants to update, refine, or create a resume from an existing file.
+description: Expert resume writer and career strategist. Analyzes any user-provided file (PDF, Word, Excel, Image, TXT, MD, or web links) to enhance skills, experience, and project descriptions. Optimized for ATS and professional impact. Use when the user wants to update, refine, or create a resume from an existing file.
 ---
 
 # Professional Resume Writing & Optimization (Universal Support)
@@ -8,7 +8,7 @@ description: Expert resume writer and career strategist. Analyzes any user-provi
 This skill enables the agent to act as an elite career coach and resume writer. It systematically analyzes existing documents in any format, extracts key values, and generates high-impact professional resumes tailored to specific domains.
 
 ## When to use this skill
-- When a user uploads a resume in ANY format (PDF, DOCX, MD, TXT, or even a screenshot/image).
+- When a user uploads a resume in ANY format (PDF, Word, Excel, Image, TXT, MD).
 - When the user provides a link to a LinkedIn profile or portfolio website.
 - When the user needs to tailor their experience to a specific job description.
 
@@ -16,9 +16,10 @@ This skill enables the agent to act as an elite career coach and resume writer. 
 1. [ ] **Analyze Input**: Utilize the appropriate tool for the input type:
    - **PDF**: Use the `pdf` tool.
    - **Word (.docx)**: Use the `docx` tool.
-   - **Images**: Use vision capabilities to read text from screenshots.
+   - **Excel (.xlsx)**: Use the `xlsx` tool.
+   - **Images**: Use vision capabilities to read text from screenshots/photos.
    - **Web Links**: Use `read_url_content` to fetch profile data.
-   - **Text/MD/Code**: Use `view_file`.
+   - **Text/MD/TXT**: Use `view_file`.
 2. [ ] **Extract Identity**: Map out the user's Core Skills, Experience (Years/Roles), Domain Expertise, and Major Projects.
 3. [ ] **Refine Content**: Rewrite bullet points using the "Action Verb + Task + Result" (STAR/XYZ) formula.
 4. [ ] **Format & Style**: Structure the content in Markdown, PDF, or DOCX as requested by the user.
